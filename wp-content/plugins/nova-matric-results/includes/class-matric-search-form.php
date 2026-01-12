@@ -8,7 +8,9 @@ class Matric_Search_Form {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 		add_action( 'wp_ajax_check_matric_exam', array( $this, 'ajax_check_exam' ) );
 		add_action( 'wp_ajax_nopriv_check_matric_exam', array( $this, 'ajax_check_exam' ) );
-        // Removed register_block_template to prevent accidental assignment to standard pages
+        
+        // Pattern registration
+        add_action( 'init', array( $this, 'register_patterns' ) );
         
         // Virtual Page Handling
         add_filter( 'generate_rewrite_rules', array( $this, 'add_rewrite_rules' ) );
@@ -88,7 +90,29 @@ class Matric_Search_Form {
 
 
     /**
-     * Deprecated: Template registration removed to prevent accidental selection on Search pages.
+     * Registers the Matric Search Widget pattern.
+     */
+    public function register_patterns() {
+        if ( ! function_exists( 'register_block_pattern' ) ) {
+            return;
+        }
+
+        $pattern_file = NOVA_MATRIC_PLUGIN_DIR . 'patterns/matric-search-widget.html';
+
+        if ( file_exists( $pattern_file ) ) {
+            register_block_pattern(
+                'nova-matric-results/search-widget',
+                array(
+                    'title'       => __( 'Matric Search Widget', 'nova-matric-results' ),
+                    'description' => _x( 'A reusable search widget for matric results.', 'Block pattern description', 'nova-matric-results' ),
+                    'content'     => file_get_contents( $pattern_file ),
+                    'categories'  => array( 'featured', 'widgets' ),
+                )
+            );
+        }
+    }
+
+    /**     * Deprecated: Template registration removed to prevent accidental selection on Search pages.
      * The template is loaded virtually via load_virtual_template().
      */
     /*
@@ -149,18 +173,17 @@ class Matric_Search_Form {
 
 		ob_start();
 		?>
-		<div class="nova-matric-search-widget">
-			<form action="<?php echo esc_url( $atts['action_url'] ); ?>" method="post" class="matric-search-form">
-				<?php wp_nonce_field( 'matric_search_verify', 'matric_nonce' ); ?>
-				<div class="form-group">
-					<label for="exam_number">Examination Number</label>
-					<input type="text" name="exam_number" id="exam_number" placeholder="Enter Exam Number" required pattern="[0-9]+" title="Numbers only, no spaces or special characters">
-					<div class="matric-search-error" style="display:none; color: red; margin-top: 5px; font-size: 0.9em;"></div>
-				</div>
-                <input type="hidden" name="matric_search_submitted" value="1">
-				<button type="submit" class="matric-search-btn">Search</button>
-			</form>
-		</div>
+        <form action="<?php echo esc_url( $atts['action_url'] ); ?>" method="post" class="matric-search-form">
+            <?php wp_nonce_field( 'matric_search_verify', 'matric_nonce' ); ?>
+            
+            <div class="matric-search-input-wrapper">
+                <input type="text" name="exam_number" id="exam_number" placeholder="Enter your exam number" required pattern="[0-9]+" title="Numbers only, no spaces or special characters">
+                <div class="matric-search-error" style="display:none;"></div>
+            </div>
+
+            <button type="submit" class="matric-search-btn">Search</button>
+            <input type="hidden" name="matric_search_submitted" value="1">
+        </form>
 		<?php
 		return ob_get_clean();
 	}
@@ -203,18 +226,18 @@ class Matric_Search_Form {
 			?>
 			<div class="matric-result-card">
 				
-				<h2 class="matric-congrats">Congratulations!</h2>
+				<h2 class="matric-congrats wp-block-heading">Congratulations!</h2>
 
 				<div class="matric-main-content">
 					
 					<div class="matric-section qualification-section">
-						<h3>You have achieved a result that makes you eligible for a:</h3>
+						<h3 class="wp-block-heading">You have achieved a result that makes you eligible for a:</h3>
 						<p class="matric-achievement highlight"><?php echo esc_html( $result->achievement_type ); ?></p>
 					</div>
 
 					<?php if ( ! empty( $subjects ) ) : ?>
 						<div class="matric-section outstanding-subjects">
-							<h3>You have also achieved outstanding results (80% - 100%) in the following subjects:</h3>
+							<h3 class="wp-block-heading">You have also achieved outstanding results (80% - 100%) in the following subjects:</h3>
 							<ul>
 								<?php foreach ( $subjects as $subject ) : ?>
 									<li><?php echo esc_html( $subject->code . ' - ' . $subject->name ); ?></li>

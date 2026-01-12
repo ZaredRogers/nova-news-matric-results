@@ -15,3 +15,45 @@
 [12-Jan-2026 10:33:44 UTC] PHP Warning:  Undefined array key "matric-results" in /wordpress/wp-includes/block-template.php on line 180
 [12-Jan-2026 10:35:16 UTC] PHP Warning:  Undefined array key "matric-results" in /wordpress/wp-includes/block-template.php on line 180
 [12-Jan-2026 10:35:48 UTC] PHP Warning:  Undefined array key "matric-results" in /wordpress/wp-includes/block-template.php on line 180
+[12-Jan-2026 11:24:45 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Matric_Search_Form does not have a method "register_patterns" in /wordpress/wp-includes/class-wp-hook.php:341
+Stack trace:
+#0 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#1 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#2 /wordpress/wp-settings.php(742): do_action('init')
+#3 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#4 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#5 /wordpress/wp-admin/admin-ajax.php(22): require_once('/wordpress/wp-l...')
+#6 {main}
+  thrown in /wordpress/wp-includes/class-wp-hook.php on line 341
+[12-Jan-2026 11:24:47 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Matric_Search_Form does not have a method "register_patterns" in /wordpress/wp-includes/class-wp-hook.php:341
+Stack trace:
+#0 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#1 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#2 /wordpress/wp-settings.php(742): do_action('init')
+#3 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#4 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#5 /wordpress/wp-admin/admin-ajax.php(22): require_once('/wordpress/wp-l...')
+#6 {main}
+  thrown in /wordpress/wp-includes/class-wp-hook.php on line 341
+[12-Jan-2026 11:24:47 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Matric_Search_Form does not have a method "register_patterns" in /wordpress/wp-includes/class-wp-hook.php:341
+Stack trace:
+#0 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#1 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#2 /wordpress/wp-settings.php(742): do_action('init')
+#3 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#4 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#5 /wordpress/wp-admin/admin.php(35): require_once('/wordpress/wp-l...')
+#6 /wordpress/wp-admin/post.php(12): require_once('/wordpress/wp-a...')
+#7 {main}
+  thrown in /wordpress/wp-includes/class-wp-hook.php on line 341
+[12-Jan-2026 11:24:49 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Matric_Search_Form does not have a method "register_patterns" in /wordpress/wp-includes/class-wp-hook.php:341
+Stack trace:
+#0 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#1 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#2 /wordpress/wp-settings.php(742): do_action('init')
+#3 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#4 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#5 /wordpress/wp-blog-header.php(13): require_once('/wordpress/wp-l...')
+#6 /wordpress/index.php(17): require('/wordpress/wp-b...')
+#7 {main}
+  thrown in /wordpress/wp-includes/class-wp-hook.php on line 341

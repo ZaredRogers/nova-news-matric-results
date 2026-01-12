@@ -1,28 +1,73 @@
 .nova-matric-search-widget {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    max-width: 400px;
+    background: #fff;
+    border: 1px solid var(--wp--preset--color--accent, #1a3a5f);
+    border-radius: 2px;
+    width: 100%;
     margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
-.matric-search-form .form-group {
-    margin-bottom: 15px;
+.matric-search-header {
+    background-color: var(--wp--preset--color--accent, #1a3a5f);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.matric-search-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.matric-search-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: -0.02px;
+    color: #fff;
+    margin: 0;
+}
+
+.matric-search-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.matric-search-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* Form Styles */
+.matric-search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.matric-search-input-wrapper {
+    width: 100%;
 }
 
 .matric-search-form input[type="text"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    height: 40px;
+    padding: 12px;
+    border: 1px solid #757575;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensure padding doesn't break width */
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #000;
+    background: #fff;
+}
+
+.matric-search-form input[type="text"]::placeholder {
+    color: #959595;
+    opacity: 1;
 }
 
 .matric-search-form input[type="text"].error-field {
@@ -32,23 +77,44 @@
 
 .matric-search-error {
     color: #c62828;
-    margin-top: 8px;
+    margin-top: 5px;
     font-size: 14px;
 }
 
 .matric-search-btn {
     width: 100%;
-    padding: 10px;
-    background-color: #0073aa;
-    color: white;
+    height: 40px; /* Match Input Height */
+    padding: 0 24px;
+    background-color: #3E3E3E;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .matric-search-btn:hover {
-    background-color: #005177;
+    background-color: #2c2c2c;
+}
+
+.matric-search-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.matric-search-footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #4F4F4F;
+    margin: 0;
 }
 
 .matric-result-card {
@@ -56,28 +122,28 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px;
+    padding: 0;
     gap: 20px;
 
     width: 100%;
-    max-width: 770px;
+    max-width: 100%;
     
-    background: #fff;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
     margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: none;
     font-family: 'Raleway', sans-serif;
 }
 
 /* Heading: Congratulations! */
 .matric-congrats {
-    font-family: 'Raleway', sans-serif;
+    font-family: inherit;
     font-weight: 600;
-    font-size: 28px;
+    font-size: var(--wp--preset--font-size--x-large, 28px);
     line-height: normal;
     letter-spacing: -0.02px;
-    color: #000;
+    color: inherit;
     margin: 0;
     width: 100%;
 }
@@ -99,21 +165,21 @@
 }
 
 .matric-section h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: inherit;
     font-weight: 600;
-    font-size: 24px;
+    font-size: var(--wp--preset--font-size--large, 24px);
     line-height: normal;
     letter-spacing: -0.02px;
-    color: #000;
+    color: inherit;
     margin: 0;
 }
 
 .matric-achievement.highlight {
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 20px;
-    line-height: 30px;
-    color: #000;
+    line-height: 1.5;
+    color: inherit;
     margin: 0;
 }
 
@@ -135,11 +201,11 @@
 }
 
 .outstanding-subjects li {
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 20px;
-    line-height: 30px;
-    color: #000;
+    line-height: 1.5;
+    color: inherit;
     /* padding-left: 30px; Removed manual padding as list-style handles it roughly, or adjusting for bullet position */
     padding-left: 5px; /* Small gap from bullet */
     margin-left: 10px; /* Slight indent */
@@ -162,17 +228,17 @@
     align-items: flex-start;
     gap: 10px;
     font-size: 20px;
-    line-height: 30px;
-    color: #000;
+    line-height: 1.5;
+    color: inherit;
 }
 
 .detail-row .label {
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-weight: 700;
 }
 
 .detail-row .value {
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-weight: 400;
 }
 
