@@ -114,12 +114,11 @@ class Matric_Admin {
 					<?php wp_nonce_field( 'matric_process_data', 'matric_nonce' ); ?>
 					<button type="submit" name="matric_action" value="import" class="button button-primary" <?php disabled( empty( $existing_files ) ); ?>>Import Data from Uploaded Files</button>
 				</form>
-				
-				<br>
-				<hr>
-				
-				<h3>Clear Database</h3>
-				<p class="description">Empty the database table. Use before a fresh import if needed.</p>
+			</div>
+
+			<div class="card">
+				<h2>Clear Database</h2>
+				<p class="description">Empty the database table. Use this when the 6 weeks grace period has passed to delete all data (This is an irreversible action).</p>
 				<form method="post" action="">
 					<?php wp_nonce_field( 'matric_process_data', 'matric_nonce' ); ?>
 					<button type="submit" name="matric_action" value="clear" class="button button-secondary" onclick="return confirm('Are you sure you want to delete all matric data from the database?');">Clear Database Table</button>
