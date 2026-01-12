@@ -1,0 +1,193 @@
+.nova-matric-search-widget {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.matric-search-form .form-group {
+    margin-bottom: 15px;
+}
+
+.matric-search-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.matric-search-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't break width */
+}
+
+.matric-search-form input[type="text"].error-field {
+    border-color: #c62828;
+    box-shadow: 0 0 0 1px #c62828;
+}
+
+.matric-search-error {
+    color: #c62828;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.matric-search-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.matric-search-btn:hover {
+    background-color: #005177;
+}
+
+.matric-result-card {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 770px;
+    
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Heading: Congratulations! */
+.matric-congrats {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: -0.02px;
+    color: #000;
+    margin: 0;
+    width: 100%;
+}
+
+.matric-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.matric-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.matric-section h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: -0.02px;
+    color: #000;
+    margin: 0;
+}
+
+.matric-achievement.highlight {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    margin: 0;
+}
+
+.outstanding-subjects {
+    margin-top: 0;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+}
+
+.outstanding-subjects ul {
+    list-style: disc;
+    padding-left: 20px; /* Make space for bullets */
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.outstanding-subjects li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    /* padding-left: 30px; Removed manual padding as list-style handles it roughly, or adjusting for bullet position */
+    padding-left: 5px; /* Small gap from bullet */
+    margin-left: 10px; /* Slight indent */
+    position: relative;
+    border: none;
+    white-space: normal;
+    overflow-wrap: break-word; /* Ensure wrapping */
+}
+
+.matric-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+}
+
+.detail-row .label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.detail-row .value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.matric-error, .matric-no-result {
+    padding: 15px;
+    background-color: #ffebee;
+    color: #c62828;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #ffcdd2;
+}
+
+.matric-no-result {
+    background-color: #edf7ed; /* Greenish/Blueish for 'not found' is sometimes better, but error color is safer for 'not found' */
+    color: #1e4620;
+    background-color: #e8f5e9;
+    border-color: #c8e6c9;
+}

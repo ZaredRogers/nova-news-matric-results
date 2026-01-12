@@ -1,0 +1,109 @@
+<!-- wp:template-part {"slug":"top-header","theme":"nm-theme","area":"header","className":"top-header"} /-->
+
+<!-- wp:template-part {"slug":"leaderboard-ad","theme":"nm-theme","area":"header","className":"leaderboard"} /-->
+
+<!-- wp:template-part {"slug":"header","theme":"nm-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","lock":{"move":false,"remove":false},"metadata":{"name":"Page Content"},"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0">
+    <!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"left":"0"},"margin":{"top":"0","bottom":"0"}}}} -->
+    <div class="wp-block-columns alignfull" style="margin-top:0;margin-bottom:0">
+        <!-- wp:column {"metadata":{"name":"Ad Column"}} -->
+        <div class="wp-block-column">
+            <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained","contentSize":"140px","justifyContent":"right","wideSize":"140px"},"blockVisibility":{"controlSets":[{"id":1,"enable":true,"controls":{"screenSize":{"hideOnScreenSize":{"medium":true,"small":true}}}}]}} -->
+            <div class="wp-block-group" style="margin-top:0;margin-bottom:0">
+                <!-- wp:newspack-ads/ad-unit {"provider":"gam","ad_unit":"23313073851","className":"takeover-ad-wrapper"} /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"width":"1140px","metadata":{"name":"Main Content"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-column"
+            style="padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);flex-basis:1140px">
+            <!-- wp:template-part {"slug":"breadcrumbs","theme":"nm-theme","area":"uncategorized"} /-->
+
+            <!-- wp:columns {"metadata":{"name":"School Category Page Content"},"align":"wide","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"var:preset|spacing|30","left":"var:preset|spacing|50"},"padding":{"right":"0","left":"0","bottom":"var:preset|spacing|30","top":"var:preset|spacing|30"}}}} -->
+            <div class="wp-block-columns alignwide"
+                style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--30);padding-right:0;padding-bottom:var(--wp--preset--spacing--30);padding-left:0">
+                <!-- wp:column {"width":"70%","metadata":{"name":"Main Column"},"style":{"spacing":{"padding":{"right":"0","left":"0"}}}} -->
+                <div class="wp-block-column" style="padding-right:0;padding-left:0;flex-basis:70%">
+                    <!-- wp:group {"metadata":{"name":"Heading"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"bottom":"0"}}},"fontSize":"x-small","layout":{"type":"default"}} -->
+                    <div class="wp-block-group alignwide has-x-small-font-size" style="padding-bottom:0">
+                        <!-- wp:heading {"level":1} -->
+                        <h1 class="wp-block-heading">Your matric examination results</h1>
+                        <!-- /wp:heading -->
+                    </div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:group {"metadata":{"name":"Disclaimer"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|30"},"border":{"radius":{"topLeft":"2px","topRight":"2px","bottomLeft":"2px","bottomRight":"2px"},"width":"2px"}},"borderColor":"accent","layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group has-border-color has-accent-border-color"
+                        style="border-width:2px;border-top-left-radius:2px;border-top-right-radius:2px;border-bottom-left-radius:2px;border-bottom-right-radius:2px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">Disclaimer</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:group {"metadata":{"name":"Paragraphs"},"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained"}} -->
+                        <div class="wp-block-group">
+                            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+                            <p style="font-style:normal;font-weight:600">These results are preliminary results and
+                                therefore, in the case of omissions, candidates must contact the school;</p>
+                            <!-- /wp:paragraph -->
+
+                            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+                            <p style="font-style:normal;font-weight:600">Bursaries are available from NSFAS for any
+                                course of study. Contact <strong>NSFAS</strong> on 08600 NSFAS (0860067327), e-mail <a
+                                    href="mailto:info@nsfas.org.za"><strong>info@nsfas.org.za</strong></a> or visit <a
+                                    href="http://www.nsfas.org.za" data-type="link" data-id="www.nsfas.org.za"
+                                    target="_blank" rel="noreferrer noopener"><strong>www.nsfas.org.za</strong></a>;</p>
+                            <!-- /wp:paragraph -->
+
+                            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+                            <p style="font-style:normal;font-weight:600">Although every effort has been taken to ensure
+                                the accuracy of the results, note that candidates’ results may have been omitted or
+                                inaccurately printed due to technical reasons.</p>
+                            <!-- /wp:paragraph -->
+                        </div>
+                        <!-- /wp:group -->
+                    </div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:shortcode -->
+                    [matric_results]
+                    <!-- /wp:shortcode -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"width":"30%","metadata":{"name":"Side Column"},"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
+                <div class="wp-block-column" style="flex-basis:30%">
+                    <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group">
+                        <!-- wp:newspack-ads/ad-unit {"provider":"gam","ad_unit":"23260014638"} /-->
+
+                        <!-- wp:template-part {"slug":"nova-e-edition","theme":"nm-theme","area":"uncategorized"} /-->
+
+                        <!-- wp:newspack-ads/ad-unit {"provider":"gam","ad_unit":"23260014590"} /-->
+                    </div>
+                    <!-- /wp:group -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"metadata":{"name":"Ad Column"}} -->
+        <div class="wp-block-column">
+            <!-- wp:group {"layout":{"type":"constrained","contentSize":"140px","justifyContent":"left"},"blockVisibility":{"controlSets":[{"id":1,"enable":true,"controls":{"screenSize":{"hideOnScreenSize":{"medium":true,"small":true}}}}]}} -->
+            <div class="wp-block-group">
+                <!-- wp:newspack-ads/ad-unit {"provider":"gam","ad_unit":"23313854296","className":"takeover-ad-wrapper"} /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"nm-theme","tagName":"footer"} /-->
